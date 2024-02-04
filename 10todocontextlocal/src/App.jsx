@@ -60,7 +60,7 @@ localStorage.setItem("todos", JSON.stringify(todos))
             </div>
          </div>
      </div>
-   </Todoprovider>
+   </Todoprovider> 
   )
 }
 
