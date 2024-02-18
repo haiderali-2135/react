@@ -1,7 +1,7 @@
 //This file will help in future if backend is chanched or for it can be used as it is in any project which uses appwrite as backend
 
 import config from "../config/config";
-import { Client, Account, ID } from "appwrite";
+import { Client, Account, ID, AppwriteException } from "appwrite";
 
 
 export class AuthService {
@@ -10,6 +10,7 @@ export class AuthService {
 
 
     constructor() {
+
         this.client.setEndpoint(config.appwriteUrl)
         this.client.setProject(config.appwriteProjectId)
 
@@ -42,11 +43,11 @@ export class AuthService {
 
     async getCurrentUser() {
         try {
-            return await this.account.get()
+            return await this.account.get();
         } catch (error) {
-            throw error
+            // throw error
+            console.log(error);
         }
-
         return null;
     }
 
