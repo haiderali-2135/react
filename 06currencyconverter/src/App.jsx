@@ -9,7 +9,7 @@ function App() {
   const [from, setFrom] = useState("usd")
   const [to, setTo] = useState("pkr")
   const [convertedAmount, setConvertedAmount]= useState(0)
-const backgroundImage = 'https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+const backgroundImage = 'https://images.pexels.com/photos/1006060/pexels-photo-1006060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 
   const currencyInfo = useCurrencyInfo(from);
 
